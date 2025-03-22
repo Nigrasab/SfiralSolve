@@ -30,7 +30,7 @@ if uploaded_file:
                     df_counts = df_counts[df_counts["Состояние"].apply(lambda x: bool(regex.match(x)))]
                 except re.error:
                     st.error("Неверный шаблон регулярного выражения.")
-
+                    
             # Сортировка
             sort_order = st.radio("Сортировать по частоте:", ["По убыванию", "По возрастанию"], horizontal=True)
             ascending = sort_order == "По возрастанию"
